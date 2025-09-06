@@ -508,6 +508,12 @@ Start of the projects section
 
 .projects {
     background-color: var(--second-bg-color);
+    font-size: 10rem;
+
+}
+
+.projects h2{
+    font-size: 6rem;
 }
 
 .projects p{
@@ -735,7 +741,9 @@ Start of footer section
     }
 
     .skills h2 {
-
+        font-size: 4rem;
+    }
+    .projects h2{
         font-size: 4rem;
     }
     .contact form {
