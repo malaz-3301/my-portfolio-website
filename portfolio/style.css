@@ -29,7 +29,7 @@ body {
     width: 100%;
     top: 0;
     left: 0;
-    padding: 4rem 15%;
+    padding: 3rem 15%;
     background: black rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
     display: flex;
@@ -150,6 +150,7 @@ section {
     font-weight: 700;
     margin-top: 1.5rem;
     line-height: 1;
+
 }
 
 .home-content h3{
@@ -157,13 +158,13 @@ section {
     font-size: 4rem;
 }
 
-#intro-text {
+/*#intro-text {
     margin:1rem 0;
     font-size: 4rem;
-    align-self: flex-end; /* محاذاة العنصر نفسه لليسار داخل flex */
+    align-self: flex-end; !* محاذاة العنصر نفسه لليسار داخل flex *!
     text-align: right;
 
-}
+}*/
 
 .home-content p {
     font-size: 2rem;
@@ -295,6 +296,7 @@ Start of the About Me Section
 }
 
 .about-content p {
+    text-align: left;
     font-size: 1.8rem;
 }
 
@@ -325,6 +327,7 @@ Start of the skills section
     background: var(--second-bg-color);
 
 }
+
 
 .skills .skills-row {
 
@@ -636,10 +639,20 @@ Start of footer section
     font-size: 16px;
 }
 
-@media(max-width:1285px) {
+@media(max-width:768px) {
+
+    .header {
+        padding: 1.2rem 5%;
+    }
+    .header a{
+        font-size: 1.8rem;
+    }
+
+
     #menu-icon {
         display: block;
     }
+
 
     .navbar {
         position: absolute;
@@ -677,11 +690,33 @@ Start of footer section
 
     .home-content {
         align-items: center;
-        text-align: center;
+    }
+    .home-content h1 {
+        font-size: 4rem;
+        font-weight: 500;
+    }
+    .home-content h3{
+        font-size: 2rem;
+    }
+
+    .home-content p {
+        font-size: 1rem;
+        font-weight: 100;
+        line-height: 3;
     }
 
     .home-img {
         width: auto;
+    }
+    .social-icons a {
+        font-size: 2rem;
+        padding: 0.8rem;
+    }
+    .btn {
+        border-radius: 3rem;
+        font-size: 1.2rem;
+        border: 0px solid transparent;
+        font-weight: 500;
     }
 
     .about {
@@ -690,6 +725,7 @@ Start of footer section
     }
 
     .about h2 {
+        font-size: 4rem;
         text-align: center;
         margin: 2rem 0;
     }
@@ -698,6 +734,10 @@ Start of footer section
         width: 52vw;
     }
 
+    .skills h2 {
+
+        font-size: 4rem;
+    }
     .contact form {
         flex-direction: column;
     }
