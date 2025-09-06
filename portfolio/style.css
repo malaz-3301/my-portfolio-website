@@ -74,6 +74,8 @@ span {
     background: linear-gradient(270deg,
             #df9808 10%,
             #ff1d15 100%);
+    -webkit-background-clip: text; /* لمتصفحات WebKit (Chrome/Safari) */
+
     background-clip: text;
     -webkit-text-fill-color: transparent; /* مهم لسفاري */
     color: transparent;
