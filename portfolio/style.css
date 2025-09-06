@@ -75,6 +75,7 @@ span {
             #df9808 10%,
             #ff1d15 100%);
     background-clip: text;
+    -webkit-text-fill-color: transparent; /* مهم لسفاري */
     color: transparent;
 }
 
