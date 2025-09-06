@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const words = [
         '<i class="fab fa-node-js"></i> NestJs Developer',
         '<i class="fab fa-laravel"></i> Laravel Developer',
+        '<i class="fas fa-user-graduate"></i> 4th-year ITE student',
     ];
 
     const typingTextElement = document.getElementById('typing-text');
@@ -51,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        const typingSpeed = isDeleting ? 75 : 150;
+        const typingSpeed = isDeleting ? 70 : 120;
         setTimeout(type, typingSpeed);
     }
 
