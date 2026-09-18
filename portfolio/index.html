@@ -219,8 +219,9 @@
                 <span class="project-framework"><i class="fab fa-node-js"></i> NestJS</span>
                 <h3>EasyRent Real Estate Backend</h3>
                 <p>
-                    Built first as a modular monolith and later as an eight-service architecture, with geospatial
-                    search, RabbitMQ messaging, Redis caching, load balancing, subscriptions, and automated tests.</p>
+                    Built first as a modular monolith and later redesigned into eight NestJS services. It supports
+                    property discovery through advanced filters and geospatial queries, with RabbitMQ workflows,
+                    Redis caching, Nginx load balancing, subscriptions, and automated tests.</p>
                 <div class="project-tags" aria-label="Technologies used">
                     <span>PostgreSQL</span><span>PostGIS</span><span>RabbitMQ</span>
                     <span>Redis</span><span>Docker</span><span>Nginx</span>
@@ -242,7 +243,8 @@
                 <span class="project-framework"><i class="fab fa-node-js"></i> NestJS</span>
                 <h3>Concurrent Order Processing</h3>
                 <p>
-                    Processes concurrent orders through BullMQ queues, retries, database locking, daily aggregation,
+                    Processes concurrent purchase operations through BullMQ queues while protecting shared data with
+                    database transactions and locks. Includes retry handling, daily sales aggregation, Docker setup,
                     and JMeter performance tests.</p>
                 <div class="project-tags" aria-label="Technologies used">
                     <span>BullMQ</span><span>Redis</span><span>PostgreSQL</span>
@@ -261,7 +263,9 @@
                 <span class="project-framework"><i class="fas fa-leaf"></i> Spring Boot</span>
                 <h3>Bookstore E-commerce</h3>
                 <p>
-                    Implements JWT authentication, role-based administration, catalog management, orders, and reviews.</p>
+                    Full-stack bookstore with customer and administrator roles, JWT authentication, catalog management,
+                    orders, and reviews. A Spring Boot REST API serves a React client covering the browsing and purchase
+                    workflow.</p>
                 <div class="project-tags" aria-label="Technologies used">
                     <span>Spring Security</span><span>PostgreSQL</span><span>React</span><span>Docker</span>
                 </div>
@@ -278,8 +282,9 @@
                 <span class="project-framework"><i class="fas fa-bolt"></i> FastAPI</span>
                 <h3>FactNLI — Fact-Checking & OSINT</h3>
                 <p>
-                    Combines Arabic and English fact-checking with evidence retrieval, passage ranking, NLI verdicts,
-                    and an OSINT module for website intelligence.</p>
+                    Bilingual fact-checking system that retrieves and ranks evidence, applies NLI, and presents the
+                    supporting passages with each verdict. An integrated OSINT module adds website intelligence and
+                    investigative context.</p>
                 <div class="project-tags" aria-label="Technologies used">
                     <span>OSINT</span><span>PyTorch</span><span>FAISS</span><span>PostgreSQL</span><span>React</span>
                 </div>
@@ -295,8 +300,8 @@
                 <span class="project-framework"><i class="fab fa-laravel"></i> Laravel</span>
                 <h3>Clothing Store API</h3>
                 <p>
-                    REST APIs for clothing products, carts, orders, and users, with
-                    authentication, authorization, and request validation.</p>
+                    REST APIs for clothing products, carts, orders, and user accounts. Authentication, authorization,
+                    and request validation separate customer workflows from protected management operations.</p>
                 <div class="project-tags" aria-label="Technologies used">
                     <span>PHP</span><span>REST API</span><span>Authentication</span><span>Validation</span>
                 </div>
