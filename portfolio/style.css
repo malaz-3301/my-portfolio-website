@@ -532,7 +532,44 @@ Start of the projects section
 }
 
 .projects h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
     font-size: 6rem;
+}
+
+.projects-pulse {
+    position: relative;
+    display: inline-block;
+    width: 1.4rem;
+    height: 1.4rem;
+    flex: 0 0 1.4rem;
+    border-radius: 50%;
+    background: var(--main-color);
+    box-shadow: 0 0 10px var(--main-color);
+}
+
+.projects-pulse::after {
+    position: absolute;
+    inset: -0.5rem;
+    border: 2px solid var(--main-color);
+    border-radius: 50%;
+    content: "";
+    animation: projects-pulse-ring 2.4s ease-out infinite;
+}
+
+@keyframes projects-pulse-ring {
+    0% {
+        opacity: 0.85;
+        transform: scale(0.65);
+    }
+
+    75%,
+    100% {
+        opacity: 0;
+        transform: scale(1.8);
+    }
 }
 
 .projects p{
@@ -1024,5 +1061,12 @@ Start of footer section
 
     .skill-card ul {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .projects-pulse::after {
+        animation: none;
+        opacity: 0.35;
     }
 }
