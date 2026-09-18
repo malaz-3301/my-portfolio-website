@@ -291,7 +291,9 @@ Start of the About Me Section
 }
 
 .about-img img {
-    width: 32vw;
+    width: min(28vw, 42rem);
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
     border-radius: 50%;
     box-shadow: 0 0 25px var(--main-color);
     transition: 0.4s ease-in-out;
@@ -310,7 +312,8 @@ Start of the About Me Section
 
 .about-content p {
     text-align: left;
-    font-size: 1.8rem;
+    font-size: 2.2rem;
+    line-height: 1.8;
 }
 
 .about-content .btn {
