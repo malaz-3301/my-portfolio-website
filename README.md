@@ -1,14 +1,28 @@
-# Personal-Portfolio-Website
-A fully responsive portfolio website built to showcase my projects, skills, and experience in a clean and modern way.
+# Mohammad Malaz Ahmad — Portfolio
 
-Key points:
+A fast, responsive portfolio focused on backend engineering, distributed systems, databases, testing, and applied AI.
 
-Designed with a minimal, professional UI to highlight work clearly.
+## Stack
 
-Fully responsive across desktop, tablet, and mobile.
+- React and TypeScript
+- Vite
+- Plain CSS with no external font or animation dependency
+- Netlify hosting
 
-Integrated smooth navigation and animations for a polished user experience.
+## Local development
 
-Acts as a central hub linking to all my projects and GitHub repositories.
+```bash
+npm install
+npm run dev
+```
 
-This project demonstrates both my frontend development skills and my ability to create a personal brand presence online.
+## Quality checks
+
+```bash
+npm run typecheck
+npm run build
+```
+
+Project content is maintained in `src/data/projects.ts` so new work can be added without changing the page structure.
+
+Live site: [malaz-ahmad.netlify.app](https://malaz-ahmad.netlify.app/)
