@@ -331,7 +331,7 @@ Start of the skills section
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 32rem), 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 2.5rem;
 }
 
@@ -387,23 +387,28 @@ Start of the skills section
 }
 
 .skill-card li {
+    position: relative;
     display: flex;
     min-width: 0;
     align-items: center;
-    gap: 0.5rem;
-    padding: 1rem 1.2rem;
-    border-left: 3px solid var(--main-color);
-    border-radius: 0.8rem;
+    padding: 0.7rem 0 0.7rem 1.6rem;
     color: #e5e5e5;
-    background: #151515;
     font-family: "Poppins";
-    font-size: 1.35rem;
+    font-size: 1.45rem;
+}
+
+.skill-card li::before {
+    position: absolute;
+    left: 0;
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 50%;
+    background: var(--main-color);
+    content: "";
 }
 
 .skill-card li i {
-    flex: 0 0 auto;
-    color: var(--main-color);
-    font-size: 1.8rem;
+    display: none;
 }
 
 
@@ -528,6 +533,13 @@ Start of the projects section
 
 .project-card a {
     color: var(--bg-color);
+}
+
+.project-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
 }
 
 .project-card:hover {
@@ -655,6 +667,12 @@ Start of footer section
     font-size: 16px;
 }
 
+@media(max-width:1200px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
 @media(max-width:768px) {
 
     .header {
@@ -752,6 +770,9 @@ Start of footer section
 
     .skills h2 {
         font-size: 4rem;
+    }
+    .skills-grid {
+        grid-template-columns: 1fr;
     }
     .projects h2{
         font-size: 4rem;
