@@ -140,6 +140,8 @@ section {
 
 .home-content {
     display: flex;
+    min-width: 0;
+    flex: 1 1 55rem;
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
@@ -173,10 +175,17 @@ section {
 }
 
 #typing-text {
+    display: inline-block;
     font-family: "Poppins";
     border-right: 3px solid var(--bg-color);
     padding-right: 5px;
+    white-space: nowrap;
     animation: blink 0.8s step-end infinite;
+}
+
+.typing-line {
+    width: 50rem;
+    min-height: 5.5rem;
 }
 
 @keyframes blink {
@@ -196,6 +205,10 @@ section {
     border-radius: 50%;
     box-shadow: 0 0 25px var(--main-color);
     transition: 0.4s ease-in-out;
+}
+
+.home-img {
+    flex: 0 0 auto;
 }
 
 .home-img img:hover {
@@ -375,7 +388,7 @@ Start of the skills section
 
 .skill-card h3 {
     font-family: "Poppins";
-    font-size: 2.2rem;
+    font-size: 2.6rem;
     line-height: 1.25;
 }
 
@@ -394,7 +407,8 @@ Start of the skills section
     padding: 0.7rem 0 0.7rem 1.6rem;
     color: #e5e5e5;
     font-family: "Poppins";
-    font-size: 1.45rem;
+    font-size: 1.8rem;
+    line-height: 1.5;
 }
 
 .skill-card li::before {
@@ -731,6 +745,11 @@ Start of footer section
     }
     .home-content h3{
         font-size: 2rem;
+    }
+    .typing-line {
+        width: 26rem;
+        min-height: 3rem;
+        text-align: center;
     }
 
     .home-content p {
