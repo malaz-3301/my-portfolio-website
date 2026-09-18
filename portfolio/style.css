@@ -535,25 +535,27 @@ Start of the projects section
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 2rem;
     font-size: 6rem;
 }
 
 .projects-pulse {
+    --projects-pulse-color: #22c55e;
     position: relative;
     display: inline-block;
     width: 1.4rem;
     height: 1.4rem;
     flex: 0 0 1.4rem;
     border-radius: 50%;
-    background: var(--main-color);
-    box-shadow: 0 0 10px var(--main-color);
+    background: var(--projects-pulse-color);
+    box-shadow: 0 0 10px var(--projects-pulse-color);
+    transform: translate(0.4rem, 0.7rem);
 }
 
 .projects-pulse::after {
     position: absolute;
     inset: -0.5rem;
-    border: 2px solid var(--main-color);
+    border: 2px solid var(--projects-pulse-color);
     border-radius: 50%;
     content: "";
     animation: projects-pulse-ring 2.4s ease-out infinite;
