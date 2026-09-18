@@ -395,7 +395,9 @@ Start of the skills section
 .skill-card ul {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.2rem;
+    row-gap: 0.8rem;
+    column-gap: 2.8rem;
+    align-content: start;
     list-style: none;
 }
 
@@ -403,12 +405,13 @@ Start of the skills section
     position: relative;
     display: flex;
     min-width: 0;
-    align-items: center;
-    padding: 0.7rem 0 0.7rem 1.6rem;
+    min-height: 4.5rem;
+    align-items: flex-start;
+    padding: 0.6rem 0 0.6rem 1.6rem;
     color: #e5e5e5;
     font-family: "Poppins";
     font-size: 2rem;
-    line-height: 1.5;
+    line-height: 1.35;
 }
 
 .skill-card li::before {
