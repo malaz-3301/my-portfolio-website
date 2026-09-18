@@ -291,7 +291,7 @@ Start of the About Me Section
 }
 
 .about-img img {
-    width: min(28vw, 42rem);
+    width: min(31vw, 48rem);
     aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 50%;
@@ -312,7 +312,7 @@ Start of the About Me Section
 
 .about-content p {
     text-align: left;
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     line-height: 1.8;
 }
 
