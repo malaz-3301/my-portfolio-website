@@ -291,7 +291,7 @@ Start of the About Me Section
 }
 
 .about-img img {
-    width: min(31vw, 48rem);
+    width: min(30vw, 46rem);
     aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 50%;
@@ -409,22 +409,36 @@ Start of the skills section
     display: flex;
     min-width: 0;
     min-height: 4.5rem;
-    align-items: flex-start;
-    padding: 0.6rem 0 0.6rem 1.6rem;
+    align-items: center;
+    padding: 0.6rem 0.8rem 0.6rem 2.5rem;
+    border-radius: 0.8rem;
     color: #e5e5e5;
     font-family: "Poppins";
     font-size: 2.3rem;
     line-height: 1.35;
+    transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
 }
 
 .skill-card li::before {
     position: absolute;
-    left: 0;
-    width: 0.6rem;
-    height: 0.6rem;
-    border-radius: 50%;
-    background: var(--main-color);
-    content: "";
+    left: 0.6rem;
+    color: var(--main-color);
+    content: ">";
+    font-family: monospace;
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1;
+    transition: transform 0.25s ease;
+}
+
+.skill-card li:hover {
+    color: white;
+    background: rgba(234, 88, 12, 0.12);
+    transform: translateX(0.5rem);
+}
+
+.skill-card li:hover::before {
+    transform: translateX(0.2rem);
 }
 
 .skill-card li i {
