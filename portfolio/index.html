@@ -219,9 +219,11 @@
                 <span class="project-framework"><i class="fab fa-node-js"></i> NestJS</span>
                 <h3>EasyRent Real Estate Backend</h3>
                 <p>
-                    Built first as a modular monolith and later redesigned into eight NestJS services. It supports
-                    property discovery through advanced filters and geospatial queries, with RabbitMQ workflows,
-                    Redis caching, Nginx load balancing, subscriptions, and automated tests.</p>
+                    Built first as a modular monolith and later redesigned into eight NestJS services. Property
+                    discovery combines specification filters with PostGIS spatial queries for location-based search,
+                    while priority listings and subscriptions support the main business flow. RabbitMQ coordinates
+                    service communication, Redis caches repeated reads, Nginx balances traffic, and automated tests
+                    cover critical operations.</p>
                 <div class="project-tags" aria-label="Technologies used">
                     <span>PostgreSQL</span><span>PostGIS</span><span>RabbitMQ</span>
                     <span>Redis</span><span>Docker</span><span>Nginx</span>
@@ -244,8 +246,9 @@
                 <h3>Concurrent Order Processing</h3>
                 <p>
                     Processes concurrent purchase operations through BullMQ queues while protecting shared data with
-                    database transactions and locks. Includes retry handling, daily sales aggregation, Docker setup,
-                    and JMeter performance tests.</p>
+                    PostgreSQL transactions and database locks. Retry handling keeps temporary failures from dropping
+                    queued work, while scheduled aggregation produces daily sales summaries. Docker provides a
+                    reproducible environment, and JMeter exercises throughput and concurrent request behavior.</p>
                 <div class="project-tags" aria-label="Technologies used">
                     <span>BullMQ</span><span>Redis</span><span>PostgreSQL</span>
                     <span>JMeter</span><span>Docker</span>
@@ -263,9 +266,10 @@
                 <span class="project-framework"><i class="fas fa-leaf"></i> Spring Boot</span>
                 <h3>Bookstore E-commerce</h3>
                 <p>
-                    Full-stack bookstore with customer and administrator roles, JWT authentication, catalog management,
-                    orders, and reviews. A Spring Boot REST API serves a React client covering the browsing and purchase
-                    workflow.</p>
+                    Full-stack bookstore covering users, books, categories, orders, order items, and reviews. The Spring
+                    Boot REST API uses Spring Security and JWT to separate customer access from administrative catalog
+                    operations. A React and Material UI client consumes the API, with PostgreSQL storing the catalog and
+                    order relationships and Docker provisioning the database.</p>
                 <div class="project-tags" aria-label="Technologies used">
                     <span>Spring Security</span><span>PostgreSQL</span><span>React</span><span>Docker</span>
                 </div>
@@ -282,9 +286,10 @@
                 <span class="project-framework"><i class="fas fa-bolt"></i> FastAPI</span>
                 <h3>FactNLI — Fact-Checking & OSINT</h3>
                 <p>
-                    Bilingual fact-checking system that retrieves and ranks evidence, applies NLI, and presents the
-                    supporting passages with each verdict. An integrated OSINT module adds website intelligence and
-                    investigative context.</p>
+                    Bilingual system for checking Arabic and English claims against retrieved evidence. It ranks the
+                    most relevant passages, applies Natural Language Inference, and returns the supporting text with
+                    each verdict so the result can be reviewed. An integrated OSINT module adds website and domain
+                    intelligence, while FastAPI, PyTorch, FAISS, PostgreSQL, and React support the end-to-end workflow.</p>
                 <div class="project-tags" aria-label="Technologies used">
                     <span>OSINT</span><span>PyTorch</span><span>FAISS</span><span>PostgreSQL</span><span>React</span>
                 </div>
@@ -300,8 +305,10 @@
                 <span class="project-framework"><i class="fab fa-laravel"></i> Laravel</span>
                 <h3>Clothing Store API</h3>
                 <p>
-                    REST APIs for clothing products, carts, orders, and user accounts. Authentication, authorization,
-                    and request validation separate customer workflows from protected management operations.</p>
+                    Laravel backend for clothing products, shopping carts, orders, and user accounts. Authentication
+                    and authorization separate customer actions from protected management operations, while request
+                    validation blocks invalid input before it reaches the application logic. The project focuses on
+                    RESTful endpoint design and clear handling of the store's core CRUD workflows.</p>
                 <div class="project-tags" aria-label="Technologies used">
                     <span>PHP</span><span>REST API</span><span>Authentication</span><span>Validation</span>
                 </div>
