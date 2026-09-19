@@ -363,6 +363,8 @@ Start of the skills section
 }
 
 .skill-card {
+    display: flex;
+    flex-direction: column;
     padding: 3rem;
     border: 2px solid rgba(234, 88, 12, 0.7);
     border-radius: 2rem;
@@ -412,6 +414,7 @@ Start of the skills section
     row-gap: 0.8rem;
     column-gap: 2.8rem;
     align-content: start;
+    margin-bottom: 2rem;
     list-style: none;
 }
 
@@ -424,6 +427,7 @@ Start of the skills section
     padding: 0.7rem 0.8rem 0.7rem 2.6rem;
     border-radius: 0.8rem;
     color: #e5e5e5;
+    cursor: default;
     font-family: "Poppins";
     font-size: 2.2rem;
     line-height: 1.3;
@@ -443,14 +447,23 @@ Start of the skills section
     transition: transform 0.25s ease;
 }
 
-.skill-card li:hover {
+.skill-card li:hover,
+.skill-card li:focus-visible,
+.skill-card li.is-active {
     color: white;
     background: rgba(234, 88, 12, 0.12);
     transform: translateX(0.5rem);
 }
 
-.skill-card li:hover::before {
+.skill-card li:hover::before,
+.skill-card li:focus-visible::before,
+.skill-card li.is-active::before {
     transform: translateX(0.2rem);
+}
+
+.skill-card li:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 1px rgba(249, 115, 22, 0.65);
 }
 
 .skill-card li.skill-wide {
@@ -459,6 +472,36 @@ Start of the skills section
 
 .skill-card li i {
     display: none;
+}
+
+.skill-card-detail {
+    min-height: 8.8rem;
+    margin-top: auto;
+    padding: 1.6rem 1.8rem 0;
+    border-top: 1px solid rgba(249, 115, 22, 0.36);
+    transition: opacity 0.16s ease, transform 0.16s ease;
+}
+
+.skill-card-detail span {
+    display: block;
+    margin-bottom: 0.45rem;
+    color: var(--main-color);
+    font-family: "Poppins";
+    font-size: 1.55rem;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+.skill-card-detail p {
+    color: #bdbdbd;
+    font-family: "Poppins";
+    font-size: 1.4rem;
+    line-height: 1.45;
+}
+
+.skill-card-detail.is-changing {
+    opacity: 0.3;
+    transform: translateY(0.25rem);
 }
 
 
@@ -1174,6 +1217,11 @@ Start of footer section
         grid-template-columns: 1fr;
     }
 
+    .skill-card-detail {
+        min-height: 9.6rem;
+        padding-inline: 1rem;
+    }
+
     .footer ul {
         display: flex;
         flex-wrap: wrap;
@@ -1191,5 +1239,11 @@ Start of footer section
     .projects-pulse::after {
         animation: none;
         opacity: 0.35;
+    }
+
+    .skill-card li,
+    .skill-card li::before,
+    .skill-card-detail {
+        transition: none;
     }
 }
