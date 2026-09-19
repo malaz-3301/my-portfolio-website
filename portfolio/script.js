@@ -32,6 +32,61 @@ window.addEventListener('resize', () => {
     }
 });
 
+// Reveal a concise description without changing the height of each skill card.
+document.querySelectorAll('.skill-card').forEach((card) => {
+    const items = [...card.querySelectorAll('li[data-detail]')];
+    const panel = card.querySelector('.skill-card-detail');
+
+    if (!items.length || !panel) return;
+
+    const detailTitle = panel.querySelector('span');
+    const detailText = panel.querySelector('p');
+    const defaultTitle = detailTitle.textContent;
+    const defaultText = detailText.textContent;
+    let changeTimer;
+
+    const renderDetail = (title, text, activeItem = null) => {
+        window.clearTimeout(changeTimer);
+        items.forEach((item) => item.classList.toggle('is-active', item === activeItem));
+        panel.classList.add('is-changing');
+
+        changeTimer = window.setTimeout(() => {
+            detailTitle.textContent = title;
+            detailText.textContent = text;
+            panel.classList.remove('is-changing');
+        }, 80);
+    };
+
+    const showItemDetail = (item) => {
+        renderDetail(item.textContent.trim(), item.dataset.detail, item);
+    };
+
+    const resetDetail = () => renderDetail(defaultTitle, defaultText);
+
+    items.forEach((item) => {
+        item.tabIndex = 0;
+        item.setAttribute('role', 'button');
+        item.setAttribute('aria-label', `${item.textContent.trim()}: show experience detail`);
+        item.addEventListener('mouseenter', () => showItemDetail(item));
+        item.addEventListener('focus', () => showItemDetail(item));
+        item.addEventListener('click', () => showItemDetail(item));
+        item.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                showItemDetail(item);
+            }
+        });
+    });
+
+    card.addEventListener('mouseleave', () => {
+        if (window.matchMedia('(hover: hover)').matches) resetDetail();
+    });
+
+    card.addEventListener('focusout', (event) => {
+        if (!card.contains(event.relatedTarget)) resetDetail();
+    });
+});
+
 // Typing animation with icons
 document.addEventListener("DOMContentLoaded", function () {
     const words = [
