@@ -24,11 +24,6 @@ body {
     overflow-x: hidden;
 }
 
-img {
-    display: block;
-    max-width: 100%;
-}
-
 .header {
 
     position: fixed;
@@ -296,7 +291,17 @@ Start of the About Me Section
     background: var(--second-bg-color);
 }
 
+.about-img {
+    flex: 0 0 auto;
+}
+
+.about-content {
+    min-width: 0;
+    flex: 1 1 auto;
+}
+
 .about-img img {
+    display: block;
     width: min(29vw, 44rem);
     aspect-ratio: 1 / 1;
     object-fit: cover;
@@ -634,15 +639,23 @@ Start of the projects section
 }
 
 .project-media {
+    position: relative;
     width: min(100%, 300px);
-    height: auto;
     aspect-ratio: 3 / 2;
+    flex: 0 0 auto;
     align-self: center;
 }
 
-.project-media img {
+.project-media img,
+.project-placeholder {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
+}
+
+.project-media img {
+    display: block;
     border-radius: 2rem;
     object-fit: cover;
 }
@@ -663,8 +676,6 @@ Start of the projects section
 
 .project-placeholder {
     display: grid;
-    width: 100%;
-    height: 100%;
     place-items: center;
     border: 2px solid var(--main-color);
     border-radius: 2rem;
