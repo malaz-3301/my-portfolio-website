@@ -586,7 +586,7 @@ Start of the projects section
     75%,
     100% {
         opacity: 0;
-        transform: scale(3.6);
+        transform: scale(3);
     }
 }
 
